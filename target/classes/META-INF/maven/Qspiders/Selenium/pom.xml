@@ -3,15 +3,4 @@
   <groupId>Qspiders</groupId>
   <artifactId>Selenium</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-<<<<<<< HEAD
-  <dependencies> 
-  <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>4.13.0</version>
-    <scope>compile</scope>
-</dependency>
-</dependencies>
-=======
->>>>>>> 2633f4ab154a39e3f2b735bb8eea4d2949f201ce
 </project>
