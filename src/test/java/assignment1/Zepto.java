@@ -28,7 +28,7 @@ public static void main(String[] args) throws InterruptedException {
 	Thread.sleep(2000);
 	search.clear();
 	search.sendKeys("doritos",Keys.ENTER);
-	driver.findElement(By.xpath("//span[text()=\"₹12\"]")).click();
+	driver.findElement(By.xpath("//span[text()=\"₹12\"]/../../..//button[text()=\"ADD\"]")).click();
 	driver.close();
 //	
 }
