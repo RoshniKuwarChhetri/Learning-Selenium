@@ -17,16 +17,18 @@ public static void main(String[] args) throws InterruptedException {
 	WebElement lastName=driver.findElement(By.id("LastName"));
 	enterData(lastName,"Kuwar Chhetri");
 	WebElement email=driver.findElement(By.id("Email"));
-	enterData(email,"rkc2@gmail.com");
+	enterData(email,"lotus1@gmail.com");
 	WebElement password=driver.findElement(By.id("Password"));
 	enterData(password,"12345678");
 	WebElement conPassword=driver.findElement(By.id("ConfirmPassword"));
 	enterData(conPassword,"12345678");
 	driver.findElement(By.id("register-button")).click();
-	if(driver.findElement(By.className("result")).equals("Your registration completed")){
+	if(driver.getCurrentUrl().contains("result")){
 		System.out.println("Register successfull");
-	}else System.out.println("Registration failure");
-	driver.close();
+			}else System.out.println("Registration failure");
+	
+	Thread.sleep(1000);
+	//driver.close();
 	
 }
 
