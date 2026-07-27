@@ -17,7 +17,10 @@ public static void main(String[] args) throws InterruptedException {
 	WebElement lastName=driver.findElement(By.id("LastName"));
 	enterData(lastName,"Kuwar Chhetri");
 	WebElement email=driver.findElement(By.id("Email"));
-	enterData(email,"lotus1@gmail.com");
+	
+	String emailData="starfire1@gmail.com";
+	
+	enterData(email,emailData);
 	WebElement password=driver.findElement(By.id("Password"));
 	enterData(password,"12345678");
 	WebElement conPassword=driver.findElement(By.id("ConfirmPassword"));
@@ -27,8 +30,14 @@ public static void main(String[] args) throws InterruptedException {
 		System.out.println("Register successfull");
 			}else System.out.println("Registration failure");
 	
+	String ele= driver.findElement(By.xpath("//div[@class='header-links']//a[@class='account']\r\n")).getText();
+	if(ele.equals(emailData)) {
+		System.out.println("right users");
+	}else {
+		System.out.println("not correct");
+	}
 	Thread.sleep(1000);
-	//driver.close();
+	driver.quit();
 	
 }
 
@@ -36,5 +45,6 @@ public static void enterData(WebElement ele,String a) throws InterruptedExceptio
 	ele.click();
 	ele.sendKeys(a);
 	Thread.sleep(1000);
+	
 }
 }
