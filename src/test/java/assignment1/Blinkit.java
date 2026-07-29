@@ -11,6 +11,8 @@ public class Blinkit {
 		driver.get("http://www.blinkit.com");
 		driver.manage().window().maximize();
 		driver.findElement(By.tagName("button")).click();
-		System.out.println(driver.getPageSource());
+		driver.findElement(By.xpath("https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=225/layout-engine/2022-11/Slice-8_4.png")).click()
+		
+		;
 	}
 }

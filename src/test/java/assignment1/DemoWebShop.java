@@ -18,7 +18,7 @@ public static void main(String[] args) throws InterruptedException {
 	enterData(lastName,"Kuwar Chhetri");
 	WebElement email=driver.findElement(By.id("Email"));
 	
-	String emailData="starfire1@gmail.com";
+	String emailData="starfire5@gmail.com";
 	
 	enterData(email,emailData);
 	WebElement password=driver.findElement(By.id("Password"));
