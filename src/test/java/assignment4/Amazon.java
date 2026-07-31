@@ -20,8 +20,10 @@ public static void main(String[] args) throws InterruptedException {
    String value= search.getDomProperty("value");
    if(product.equals(value)) {
 	   System.out.println("pass");
+	   
    }else {
 	   System.out.println("fail");
    }
+   driver.quit();
 }
 }

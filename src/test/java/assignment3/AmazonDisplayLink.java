@@ -21,25 +21,35 @@ public class AmazonDisplayLink {
         
         int displayCount = 0;
         int notDisplayCount = 0;
-        String text="";
-        
-        for (WebElement ele : links) {
            
+        for (WebElement ele : links) {
+        	  
             if (ele.isDisplayed()) {
-            	
-                displayCount++;
+            	                
+            	displayCount++;
+                System.out.println("visible link:" + displayCount);
+                System.out.println( ele.getDomProperty("innerText"));
+                System.out.println("-------------------------------------------------------------------------------------------");
             } else {
                 notDisplayCount++;
+            	                
+                System.out.println("Invisible link:"+notDisplayCount);
+
+                System.out.println( ele.getDomProperty("innerText"));
+                System.out.println("---------------------------------------------------------------------------------------------");
+    	          
             }
-             text=ele.getText();
-        }
+                     }
+        System.out.println("---------------------------------------------------------------------------------------------");
+          
+                System.out.println("Total Links Found: " + links.size());
+                
+  	              System.out.println("Total Displayed Links: " + displayCount);
+  	            System.out.println("Total Invisible Links: " + notDisplayCount);
+       
         
-        
-        System.out.println("Total Displayed Links: " + displayCount);
-        System.out.println("Total Invisible Links: " + notDisplayCount);
-        System.out.println("Total Links Found: " + links.size());
-        System.out.println("text" + text);
-        
+      
+        driver.quit();
        
     }
 }
