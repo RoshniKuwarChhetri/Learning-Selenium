@@ -33,15 +33,10 @@ public class AmazonDisplayLink {
             } else {
                 notDisplayCount++;
             	                
-                System.out.println("Invisible link:"+notDisplayCount);
-
-                System.out.println( ele.getDomProperty("innerText"));
-                System.out.println("---------------------------------------------------------------------------------------------");
-    	          
+                
+                 
             }
                      }
-        System.out.println("---------------------------------------------------------------------------------------------");
-          
                 System.out.println("Total Links Found: " + links.size());
                 
   	              System.out.println("Total Displayed Links: " + displayCount);
