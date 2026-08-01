@@ -20,8 +20,9 @@ public class Demowebshop {
 
         Iterator<WebElement> itr = links.iterator();
 
-        while (itr.hasNext()) {
+        while (itr.hasNext()) { 
             WebElement element = itr.next();
+            //E AKA generic return type is the  return type of next()  
             System.out.println(element.getText());
         }
 
