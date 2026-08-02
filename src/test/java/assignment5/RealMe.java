@@ -2,39 +2,63 @@ package assignment5;
 
 import java.util.Iterator;
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class RealMe {
-    public static void main(String[] args) throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://amazon.in");
-        driver.manage().window().maximize();
-        Thread.sleep(2000);
 
-        WebElement search = driver.findElement(By.id("twotabsearchtextbox"));
-        search.sendKeys("Realme phones");
-        search.submit();
+    public static void main(String[] args) throws Exception {
+
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+
+        driver.get("https://www.amazon.in");
+
         Thread.sleep(3000);
 
-        List<WebElement> realme = driver.findElements(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']//h2[@class='a-size-medium a-spacing-none a-color-base a-text-normal']"));
-        Iterator<WebElement> itr = realme.iterator();
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("phones");
+        driver.findElement(By.id("nav-search-submit-button")).click();
 
-        while (itr.hasNext()) {
-            WebElement currPh = itr.next();
-            String text = currPh.getText().toLowerCase();
+        Thread.sleep(3000);
+
+        // Product names
+        List<WebElement> allProduct = driver.findElements(
+                By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']//h2//span"));
+
+        // Add to Cart buttons
+        List<WebElement> allAddToCart = driver.findElements(
+                By.xpath("//input[@name='submit.addToCart']"));
+
+        Iterator<WebElement> it = allProduct.iterator();
+
+        int pointer = 0;
+
+        while (it.hasNext()) {
+
+            String text = it.next().getDomProperty("innerText");
 
             if (text.contains("realme")) {
-                System.out.println("Adding: " + currPh.getText());
-                WebElement add = currPh.findElement(By.xpath("./ancestor::div[contains(@class, 's-result-item')]//button[@name='submit.addToCart']"));
-                add.click();
-                Thread.sleep(4000);
+
+                System.out.println(text);
+
+                try {
+
+                    allAddToCart.get(pointer).click();
+
+                } catch (Exception e) {
+
+                    driver.findElement(By.xpath("(//button[@aria-label='Close'])[2]")).click();
+
+                                }
             }
+
+            pointer++;
         }
 
-        driver.quit();
+        Thread.sleep(5000);
+        //driver.quit();
     }
 }
-`
