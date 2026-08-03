@@ -13,14 +13,12 @@ public static void main(String[] args) throws InterruptedException {
     driver.manage().window().maximize();
     Thread.sleep(2000);
     WebElement search=driver.findElement(By.id("twotabsearchtextbox"));
-    search.sendKeys("apple");
+    search.sendKeys("mobile");
     Thread.sleep(2000);
 
-    search.sendKeys(Keys.ARROW_DOWN);
-    search.sendKeys(Keys.ARROW_DOWN);
-
-    search.sendKeys(Keys.ARROW_DOWN);
-    search.sendKeys(Keys.ENTER);
+    search.clear();
+    Thread.sleep(2000);
+    search.sendKeys(Keys.SHIFT+"Realme",Keys.ENTER);
 
 }
 }

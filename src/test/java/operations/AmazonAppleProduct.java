@@ -17,9 +17,14 @@ public static void main(String[] args) throws InterruptedException {
     Thread.sleep(2000);
 
     search.sendKeys(Keys.ARROW_DOWN);
-    search.sendKeys(Keys.ARROW_DOWN);
+    Thread.sleep(1000);
 
     search.sendKeys(Keys.ARROW_DOWN);
+    Thread.sleep(1000);
+
+    search.sendKeys(Keys.ARROW_DOWN);
+    Thread.sleep(1000);
+
     search.sendKeys(Keys.ENTER);
 
 }
