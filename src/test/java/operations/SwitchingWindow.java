@@ -36,5 +36,5 @@ System.out.println(id);
 driver.findElement(By.xpath("//div[@id=\"a-accordion-auto-6\"]//input[@id=\"add-to-cart-button\"]")).click();
 	
 }
-}////input{@id="add-to-cart-button"]  
+}
 
