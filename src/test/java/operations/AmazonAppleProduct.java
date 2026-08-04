@@ -26,6 +26,10 @@ public static void main(String[] args) throws InterruptedException {
     Thread.sleep(1000);
 
     search.sendKeys(Keys.ENTER);
+    //driver.findElement(By.xpath("//span[text()=\"Original Earphone for iPhone 14, 13, 12, 11, XR, XS, X, SE – Wired Lightening Interface Ensuring Seamless Playback and Noise-Free Mic Sound\"]")).click();
+    
+    
+    
 
 }
 }

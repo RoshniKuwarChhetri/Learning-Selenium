@@ -16,11 +16,12 @@ public class KeyBoardActions {
         
         WebElement search = driver.findElement(By.id("twotabsearchtextbox"));
 
-               search.sendKeys("apple Mpbile", Keys.SPACE);
+               search.sendKeys("apple Mobile", Keys.SPACE);
         Thread.sleep(1000); 
-        search.sendKeys(Keys.chord(Keys.CONTROL, "a")); 
+        search.sendKeys(Keys.CONTROL, "a"); 
         Thread.sleep(1000);
-        search.sendKeys(Keys.chord(Keys.CONTROL, "x")); 
+        search.sendKeys(Keys.CONTROL, "x")
+        ; 
         Thread.sleep(1000);
 
                search.sendKeys("iphone "); 
@@ -28,6 +29,25 @@ public class KeyBoardActions {
         	search.sendKeys(Keys.CONTROL, "v");
         
                 Thread.sleep(3000); 
+                Thread.sleep(2000);
+
+                search.sendKeys(Keys.ARROW_DOWN);
+                Thread.sleep(1000);
+
+                search.sendKeys(Keys.ARROW_DOWN);
+                Thread.sleep(1000);
+
+                search.sendKeys(Keys.ARROW_DOWN);
+                Thread.sleep(1000);
+
+                search.sendKeys(Keys.ENTER);
+
+                
+                driver.findElement(By.xpath("//span[text()=\"iPhone 17 Pro Max 256 GB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Silver\"]")).click();
+                Thread.sleep(2000);
+
+                driver.findElement(By.id("add-to-cart-button")).click();
+                
         //driver.quit();
     }
 }
