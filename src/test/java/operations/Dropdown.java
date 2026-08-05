@@ -19,15 +19,20 @@ public static void main(String[] args) throws InterruptedException {
 	
 	WebElement sel1= driver.findElement(By.id("products-orderby"));
 	Select select1=new Select(sel1);
-	select1.selectByVisibleText("Name: A to Z");
 	select1.selectByVisibleText("Name: Z to A");
-
-	select1.deselectByVisibleText("Name: A to Z");
-	//select1.getFirstSelectedOption();
 	
-	WebElement sel2=driver.findElement(By.id("products-pagesize"));
-	Select select2 =new Select(sel2);
-	select2.selectByVisibleText("4");
+	sel1= driver.findElement(By.id("products-orderby"));
+    select1=new Select(sel1);
+	select1.selectByVisibleText("Name: A to Z");
+
+	//select1.deselectByVisibleText("Name: A to Z");
+	sel1= driver.findElement(By.id("products-orderby"));
+    select1=new Select(sel1);
+	System.out.println(select1.getFirstSelectedOption().getText());
+	
+//	WebElement sel2=driver.findElement(By.id("products-pagesize"));
+//	Select select2 =new Select(sel2);
+//	select2.selectByVisibleText("4");
 	//select2.deselectByVisibleText("4");
 	
 	
