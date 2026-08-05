@@ -18,6 +18,7 @@ public static void main(String[] args) throws InterruptedException {
 	search.click();
 	search.sendKeys("mobile");
 	search.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+	
 	String id=driver.getWindowHandle();
 System.out.println(id);
 	driver.findElement(By.xpath("//span[text()=\"Apple iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Silver\"]")).click();

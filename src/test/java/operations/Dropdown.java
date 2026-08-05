@@ -11,23 +11,31 @@ import org.openqa.selenium.support.ui.Select;
 public class Dropdown {
 public static void main(String[] args) throws InterruptedException {
 	WebDriver driver = new ChromeDriver();
-	driver.get("https://demoqa.com/select-menu");
+	driver.get("https://demowebshop.tricentis.com/");
 	driver.manage().window().maximize();
-	WebElement ele1= driver.findElement(By.id("oldSelectMenu"));
-	Select select=new Select(ele1);
+	WebElement search= driver.findElement(By.id("small-searchterms"));
+	search.sendKeys("computer");
+	search.submit();
 	
-	//select by index
-	//select.selectByIndex(2);
-	//select by value
-	//select.selectByValue("5");
+	WebElement sel1= driver.findElement(By.id("products-orderby"));
+	Select select1=new Select(sel1);
+	select1.selectByVisibleText("Name: A to Z");
+	select1.selectByVisibleText("Name: Z to A");
+
+	select1.deselectByVisibleText("Name: A to Z");
+	//select1.getFirstSelectedOption();
 	
-	//select by visible text
-	select.selectByVisibleText("Magenta");
-	java.util.List<WebElement> list=select.getOptions();
-	for(WebElement elements:list) {
-		System.out.println(elements.getText());
-	}
-	driver.quit();
+	WebElement sel2=driver.findElement(By.id("products-pagesize"));
+	Select select2 =new Select(sel2);
+	select2.selectByVisibleText("4");
+	//select2.deselectByVisibleText("4");
+	
+	
+	
+	
+	
+	
+
 	
 	}
 }
