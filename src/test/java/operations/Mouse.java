@@ -15,10 +15,14 @@ public static void main(String[] args) throws InterruptedException {
 	driver.manage().window().maximize();
 	
 	Actions actions =new Actions(driver); 
-	WebElement ele = driver.findElement(By.xpath("//ul[@class='top-menu']//a[@href='/books']"));
+	WebElement ele = driver.findElement(By.xpath("//ul[@class='top-menu']//a[@href='/computers']"));
 	actions.moveToElement(ele).perform();
 	
 	Thread.sleep(2000);
-	driver.close();
+	WebElement ele2= driver.findElement(By.xpath("//ul[@class='top-menu']//a[@href='/notebooks']"));
+	actions.moveToElement(ele2);
+	
+	Thread.sleep(2000);
+	//driver.close();
 }
 }
