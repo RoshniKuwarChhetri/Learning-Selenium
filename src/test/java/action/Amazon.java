@@ -12,6 +12,6 @@ public class Amazon {
 	      Thread.sleep(2000);
 	      
 	      Actions actions = new Actions(driver);
-	      actions.moveByOffset(1264, 30).moveByOffset(0,426).click().perform();
+	      actions.moveByOffset(1264, 30).moveByOffset(0,428).click().perform();
 	}
 }
