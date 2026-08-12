@@ -11,6 +11,7 @@ public static void main(String[] args) throws InterruptedException {
 	driver.get("https://demowebshop.tricentis.com/");
 	driver.manage().window().maximize();
 	driver.findElement(By.linkText("Register")).click();
+	
 	driver.findElement(By.xpath("//label[@for=\"gender-female\"]")).click();
 	WebElement name=driver.findElement(By.id("FirstName"));
 	enterData(name,"Roshni");
@@ -25,6 +26,7 @@ public static void main(String[] args) throws InterruptedException {
 	enterData(password,"12345678");
 	WebElement conPassword=driver.findElement(By.id("ConfirmPassword"));
 	enterData(conPassword,"12345678");
+	
 	driver.findElement(By.id("register-button")).click();
 	if(driver.getCurrentUrl().contains("result")){
 		System.out.println("Register successfull");

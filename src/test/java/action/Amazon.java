@@ -13,5 +13,7 @@ public class Amazon {
 	      
 	      Actions actions = new Actions(driver);
 	      actions.moveByOffset(1264, 30).moveByOffset(0,428).click().perform();
+	      
+	      
 	}
 }
