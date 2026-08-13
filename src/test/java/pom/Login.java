@@ -43,14 +43,12 @@ public WebElement getEmail() {
 public WebElement getPassword() {
 	return password;
 }
-public void setPassword(WebElement password) {
-	this.password = password;
-}
+
 public WebElement getConfirmPassword() {
 	return confirmPassword;
 }
-public void setReg(WebDriver reg) {
-	this.reg = reg;
+public WebDriver getReg() {
+	return reg;
 }
 
 

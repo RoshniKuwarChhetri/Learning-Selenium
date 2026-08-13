@@ -22,5 +22,5 @@ public static void main(String[] args) {
 	login.getEmail().sendKeys("123@gmail.com");
 	login.getPassword().sendKeys("12345678");
 	login.getConfirmPassword().sendKeys("12345678");
-}
+		}
 }
