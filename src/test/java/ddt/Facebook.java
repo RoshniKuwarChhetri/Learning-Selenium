@@ -3,8 +3,10 @@ package ddt;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,27 +16,22 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Facebook {
 	 static WebDriver driver;
 
+	 	
     public static void main(String[] args) throws IOException, InterruptedException {
-
+ 
        
         FileInputStream file = new FileInputStream(
         		"src/test/resources/FacebookData.properties");
-
        
         Properties prop = new Properties();
 
-        
         prop.load(file);
-
+// /Selenium/src/test/resources/FacebookData.properties
        
         String browser = prop.getProperty("browser");
         String url = prop.getProperty("url");
         String userName = prop.getProperty("username");
         String password = prop.getProperty("password");
-
-       
-
-       
        
         switch (browser) {
 
@@ -69,23 +66,23 @@ public class Facebook {
         
         driver.findElement(By.xpath("//span[text()=\"Log in\"]")).click();
 
-        Thread.sleep(3000);
-
+        //Thread.sleep(3000);
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         
         String errorMessage = driver.findElement(
-                By.xpath("//a[@href=\"https://facebook.com/login/identify/\"]"))
+                By.xpath("//*[name()='svg' and @class='x1lliihq x2lah0s x1k90msu x2h7rmj x1qfuztq x1a1m0xk xlup9mm x1kky2od']/../.."))
                 .getText();
-
+////a[@href=\"https://facebook.com/login/identify/\"]"
         
                 FileOutputStream fileOutput = new FileOutputStream(
                 "src/test/resources/FacebookData.properties");
 
                prop.setProperty("errorMessage", errorMessage);
 
-              prop.store(fileOutput, "Updated Facebook Login Error");
+              prop.store(fileOutput, "Facebook login");
 
         fileOutput.close();
-        file.close();
+       
 
         
     }
