@@ -29,7 +29,7 @@ public static void main(String[] args) {
 	driver.switchTo().window(parent);
 	
 	if(driver.getTitle().contains("DEMOQA")) {
-		System.out.println("Parent Window Restored Successfully");
+		System.out.println("Parent Window Restoration Successfull");
 	}else {
 		System.out.println("Parent Window Not Found");
 	}
