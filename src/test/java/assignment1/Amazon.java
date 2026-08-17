@@ -20,4 +20,4 @@ public static void main(String[] args) throws InterruptedException {
 }
 }
 //driver.findElement(By.id("_R_1hmkqsqppb6amH1_")).sendKeys("123");
-span[@id='WVCRIAFWG']/../../../../../..//button[@class='a-button-text']"
+//span[@id='WVCRIAFWG']/../../../../../..//button[@class='a-button-text']"
