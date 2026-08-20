@@ -15,16 +15,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Task1 {
 public static void main(String[] args) {
+//ChromeOptions options = new ChromeOptions();
+
 ChromeOptions options = new ChromeOptions();
+options.addArguments("--disable-notifications");
 
-Map<String, Object> prefs = new HashMap<>();
-
-prefs.put("credentials_enable_service", false);
-prefs.put("profile.password_manager_leak_detection", false);
-
-options.setExperimentalOption("prefs", prefs);
-
-WebDriver driver = new ChromeDriver(options);	driver.manage().window().maximize();
+WebDriver driver = new ChromeDriver(options);	
+driver.manage().window().maximize();
 	driver.get("https://www.saucedemo.com/?utm_source=chatgpt.com");
 	driver.findElement(By.id("user-name")).sendKeys("standard_user");
 	driver.findElement(By.id("password")).sendKeys("secret_sauce");
@@ -72,9 +69,6 @@ WebDriver driver = new ChromeDriver(options);	driver.manage().window().maximize(
 		System.out.println("pass");
 	}
 	driver.quit();
-//    for(WebElement name: pName ) {
-//    	
-//    }
 	
 }
 }
