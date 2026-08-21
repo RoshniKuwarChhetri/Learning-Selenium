@@ -14,7 +14,7 @@ public static void main(String[] args) {
 	driver.manage().window().maximize();
 	driver.get("https://demoqa.com/alerts");
 	WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(5));
-	wait.until(ExpectedConditions.alertIsPresent(By.("timerAlertButton"))).click();
+	wait.until(ExpectedConditions.alertIsPresent());
 	
 }
 }
