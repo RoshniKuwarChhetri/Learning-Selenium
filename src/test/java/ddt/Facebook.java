@@ -26,7 +26,7 @@ public class Facebook {
         Properties prop = new Properties();
 
         prop.load(file);
-// /Selenium/src/test/resources/FacebookData.properties
+//// /Selenium/src/test/resources/FacebookData.properties
        
         String browser = prop.getProperty("browser");
         String url = prop.getProperty("url");
