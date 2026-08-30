@@ -18,7 +18,7 @@ public static void main(String[] args) throws InterruptedException {
     driver.findElement(By.linkText("Dynamic Controls")).click();	
     driver.findElement(By.xpath("//button[text()=\"Remove\"]")).click();
     
-    wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("checkbox"))));
+    wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.id("checkbox"))));
     driver.findElement(By.xpath("//button[text()=\"Add\"]")).click();
     
     wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("checkbox"))));
