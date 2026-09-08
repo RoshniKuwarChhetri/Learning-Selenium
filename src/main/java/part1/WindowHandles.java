@@ -19,7 +19,7 @@ public static void main(String[] args) {
 	for(String no : ids) {
 		if(!no.equals(id)) {
 			driver.switchTo().window(id);
-			System.out.println(no);
+			System.out.println(id);
 		}
 	}
 }
