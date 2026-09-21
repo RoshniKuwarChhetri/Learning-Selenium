@@ -37,6 +37,8 @@ public static void main(String[] args) {
 	Actions act= new Actions(driver);
 	act.moveToElement(driver.findElement(By.xpath("(//img[@src='/img/avatar-blank.jpg'])[1]"))).perform();
 	driver.findElement(By.xpath("//a[@href=\"/users/1\"]")).click();
+	act.contextClick().perform();	
+	act.doubleClick().perform();
 	
 	
 }
