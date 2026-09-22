@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-21T18:22:40 IST" name="Group Suite" finished-at="2026-09-21T18:22:40 IST" duration-ms="77">
+  <suite started-at="2026-09-22T17:41:42 IST" name="Suite" finished-at="2026-09-22T17:41:45 IST" duration-ms="3093">
     <groups>
-      <group name="smoke">
-        <method signature="GroupsDemo.loginTest()[pri:0, instance:testng.GroupsDemo@765d7657]" name="loginTest" class="testng.GroupsDemo"/>
-        <method signature="GroupsDemo.searchTest()[pri:0, instance:testng.GroupsDemo@765d7657]" name="searchTest" class="testng.GroupsDemo"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-09-21T18:22:40 IST" name="Smoke Test" finished-at="2026-09-21T18:22:40 IST" duration-ms="77">
-      <class name="testng.GroupsDemo">
-        <test-method signature="loginTest()[pri:0, instance:testng.GroupsDemo@765d7657]" started-at="2026-09-21T18:22:40 IST" name="loginTest" finished-at="2026-09-21T18:22:40 IST" duration-ms="12" status="PASS">
+    <test started-at="2026-09-22T17:41:42 IST" name="Test" finished-at="2026-09-22T17:41:45 IST" duration-ms="3093">
+      <class name="testng.Parallel2">
+        <test-method signature="b()[pri:0, instance:testng.Parallel2@443118b0]" started-at="2026-09-22T17:41:42 IST" name="b" finished-at="2026-09-22T17:41:45 IST" duration-ms="3021" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method signature="searchTest()[pri:0, instance:testng.GroupsDemo@765d7657]" started-at="2026-09-21T18:22:40 IST" name="searchTest" finished-at="2026-09-21T18:22:40 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- b -->
+      </class> <!-- testng.Parallel2 -->
+      <class name="testng.Parallel1">
+        <test-method signature="a()[pri:0, instance:testng.Parallel1@78691363]" started-at="2026-09-22T17:41:42 IST" name="a" finished-at="2026-09-22T17:41:45 IST" duration-ms="3021" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchTest -->
-      </class> <!-- testng.GroupsDemo -->
-    </test> <!-- Smoke Test -->
-  </suite> <!-- Group Suite -->
+        </test-method> <!-- a -->
+      </class> <!-- testng.Parallel1 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
