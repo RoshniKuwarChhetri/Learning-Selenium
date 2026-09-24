@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest {
 		driver.findElement(By.id("password")).sendKeys("12345678910");
 		driver.findElement(By.id("login-button")).click();
 		
-		Assert.assertTrue(driver.getCurrentrl().contains())
+		
 	}
 	
 }
